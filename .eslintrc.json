@@ -4,10 +4,11 @@
         "es6": true
     },
     "extends": [
-        "react-app",
-        "airbnb",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "globals": {
@@ -28,6 +29,12 @@
         "import"
     ],
     "rules": {
+        "prettier/prettier": "error",
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "import/prefer-default-export": "off",
         "react/jsx-filename-extension": [
             1,
             {
@@ -51,17 +58,32 @@
                 "ts": "never",
                 "tsx": "never"
             }
-        ],
-        "settings": {
-            "import/parsers": {
-                "@typescript-eslint/parser": [
-                    ".ts",
-                    ".tsx"
-                ]
-            },
-            "import/resolver": {
-                "typescript": {}
-            }
+        ]
+        // "import/no-unresolved": "off"
+        // "settings": {
+        //     "import/parsers": {
+        //         "@typescript-eslint/parser": [
+        //             ".ts",
+        //             ".tsx"
+        //         ],
+        //         "node": {
+        //             "extensions": [
+        //                 ".js",
+        //                 ".jsx",
+        //                 ".ts",
+        //                 ".tsx",
+        //                 ".json"
+        //             ]
+        //         }
+        //     }
+        // "react": {
+        //     "version": "detect" Tells eslint-plugin-react to automatically detect the version of React to use
+        // }
+        // }
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
         }
     }
 }
