@@ -1,89 +1,91 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "plugin:@typescript-eslint/recommended",
-        "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-        "plugin:prettier/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "react-hooks",
-        "@typescript-eslint",
-        "import"
-    ],
-    "rules": {
-        "prettier/prettier": "error",
-        "react/jsx-props-no-spreading": "off",
-        "react/prop-types": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-unused-vars": "off",
-        "import/prefer-default-export": "off",
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".tsx"
-                ]
-            }
-        ],
-        "no-unused-expressions": [
-            "error",
-            {
-                "allowTaggedTemplates": true
-            }
-        ],
-        "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-                "ts": "never",
-                "tsx": "never"
-            }
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "import",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx"
         ]
-        // "import/no-unresolved": "off"
-        // "settings": {
-        //     "import/parsers": {
-        //         "@typescript-eslint/parser": [
-        //             ".ts",
-        //             ".tsx"
-        //         ],
-        //         "node": {
-        //             "extensions": [
-        //                 ".js",
-        //                 ".jsx",
-        //                 ".ts",
-        //                 ".tsx",
-        //                 ".json"
-        //             ]
-        //         }
-        //     }
-        // "react": {
-        //     "version": "detect" Tells eslint-plugin-react to automatically detect the version of React to use
-        // }
-        // }
-    },
-    "settings": {
-        "import/resolver": {
-            "typescript": {}
-        }
+      }
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+    // "import/no-unresolved": "off"
+    // "settings": {
+    //     "import/parsers": {
+    //         "@typescript-eslint/parser": [
+    //             ".ts",
+    //             ".tsx"
+    //         ],
+    //         "node": {
+    //             "extensions": [
+    //                 ".js",
+    //                 ".jsx",
+    //                 ".ts",
+    //                 ".tsx",
+    //                 ".json"
+    //             ]
+    //         }
+    //     }
+    // "react": {
+    //     "version": "detect" Tells eslint-plugin-react to automatically detect the version of React to use
+    // }
+    // }
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
+  }
 }
