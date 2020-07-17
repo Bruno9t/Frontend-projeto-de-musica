@@ -8,6 +8,9 @@ export default createGlobalStyle`
     outline:0;
     box-sizing:border-box;
   }
+  body{
+    background-color:#2c3e50;
+  }
 
   button {
     cursor:pointer;
