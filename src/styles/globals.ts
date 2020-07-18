@@ -10,6 +10,8 @@ export default createGlobalStyle`
   }
   body{
     background-color:#2c3e50;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   button {
