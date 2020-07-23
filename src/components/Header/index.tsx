@@ -9,7 +9,7 @@ import Menu from '../Menu'
 const Header = () => {
   return (
     <Container>
-      {/* <Menu /> */}
+      <Menu />
       <LogoInfo>
         <Title>
           <img src={logo} alt="" />

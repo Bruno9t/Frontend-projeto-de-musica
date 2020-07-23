@@ -19,6 +19,9 @@ const Home = () => {
                 Aqui você pode compartilhar músicas criadas por você e ganhar
                 seguidores, podendo ficar famoso por aqui.
               </div>
+              <div className="start-adventure-link">
+                <a href="/">Iniciar jornada musical</a>
+              </div>
             </div>
           </div>
           <div id="info-image">

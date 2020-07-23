@@ -28,16 +28,33 @@ const Container = styled.main`
     font-size: 20px;
   }
 
+  div.start-adventure-link a {
+    display: inline-block;
+    color: ${props => props.theme.colors.text};
+    text-decoration: none;
+    margin-top: 70px;
+    background-color: ${props => props.theme.colors.primary};
+    padding: 20px;
+    border-radius: 3px;
+    transition: 320ms;
+  }
+
+  div.start-adventure-link a:hover {
+    background: ${props => props.theme.colors['background-hover']};
+    color: ${props => props.theme.colors.primary};
+    box-shadow: 2px 2px 5px black;
+  }
+
   div#info-text h1 {
     margin-bottom: 20px;
   }
 
   div#info-text > div {
-    background-color: #34495e;
+    background-color: ${props => props.theme.colors.secondary};
     border-radius: 3px;
     padding: 15px;
     text-align: center;
-    color: white;
+    color: ${props => props.theme.colors.text};
     width: 100%;
     height: 100%;
   }

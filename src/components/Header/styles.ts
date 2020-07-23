@@ -4,7 +4,7 @@ const Title = styled.h1`
   position: absolute;
   font-size: 50px;
   display: inline-block;
-  color: white;
+  color: ${props => props.theme.colors.text};
   top: 50%;
   transform: translateY(-50%);
   z-index: 0;
@@ -12,12 +12,14 @@ const Title = styled.h1`
   img:nth-child(1) {
     height: 70px;
     width: 70px;
-    /* transform: rotateX(180deg) rotate(-33deg); */
+    filter: ${props => props.theme.colors.filter};
+
     transform: rotateX(180deg);
   }
   img:nth-child(2) {
     transform: rotateY(180deg);
     height: 30px;
+    filter: ${props => props.theme.colors.filter};
     width: 30px;
   }
   @media (max-width: 700px) {
@@ -41,7 +43,7 @@ const LogoInfo = styled.div`
   position: relative;
   height: 150px;
   font-size: 50px;
-  color: white;
+  color: ${props => props.theme.colors.text};
   text-align: center;
 
   z-index: 0;
@@ -66,19 +68,18 @@ const LoginInfo = styled.div`
     height: 100%;
     outline: none;
     text-decoration: none;
-    color: white;
+    color: ${props => props.theme.colors.text};
     font-weight: bold;
-    color: white;
-    border: 2px solid white;
-    background-color: #2c3e50;
+    border: 2px solid ${props => props.theme.colors['background-hover']};
+    background-color: ${props => props.theme.colors.primary};
     border-radius: 3px;
     transition: 300ms;
   }
 
   div a:hover {
-    background: white;
-    color: #2c3e50;
-    border: 2px solid #34495e;
+    background: ${props => props.theme.colors['background-hover']};
+    color: ${props => props.theme.colors.primary};
+    border: 2px solid ${props => props.theme.colors.secondary};
   }
 
   /* @media (max-width: 700px) {

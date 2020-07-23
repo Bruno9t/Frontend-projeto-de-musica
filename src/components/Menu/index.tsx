@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext, memo } from 'react'
+import { ThemeContext } from 'styled-components'
 import {
   FiMusic,
   FiPlusCircle,
@@ -7,6 +8,7 @@ import {
   FiStar,
   FiAlignJustify,
   FiMoon,
+  FiSun,
 } from 'react-icons/fi'
 import {
   Container,
@@ -17,14 +19,23 @@ import {
 } from './styles'
 
 const Menu = () => {
+  const theme = useContext(ThemeContext)
   return (
     <Container>
-      <ToggleTheme keyP={0}>
-        <FiMoon
-          aria-label="Alterar Tema"
-          title="Alterar Tema"
-          aria-describedby="Alterar Tema"
-        />
+      <ToggleTheme keyP={0} onClick={theme.changeTheme}>
+        {theme.name === 'dark' ? (
+          <FiSun
+            aria-label="Alterar Tema"
+            title="Alterar para tema light"
+            aria-describedby="Alterar Tema"
+          />
+        ) : (
+          <FiMoon
+            aria-label="Alterar Tema"
+            title="Alterar para tema dark"
+            aria-describedby="Alterar Tema"
+          />
+        )}
       </ToggleTheme>
 
       <LineBreak />

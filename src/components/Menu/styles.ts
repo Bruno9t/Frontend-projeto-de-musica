@@ -6,7 +6,7 @@ interface OptionProps {
 
 const Container = styled.header`
   position: absolute;
-  background-color: #34495e;
+  background-color: ${props => props.theme.menu.secondary};
   height: ${defaults().diameter}px;
   width: ${defaults().diameter}px;
   border-radius: 50%;
@@ -31,9 +31,9 @@ const Option = styled.div<OptionProps>`
   position: absolute;
   display: inline-block;
   cursor: pointer;
-  color: white;
+  color: ${props => props.theme.colors.text};
   font-weight: bold;
-  background-color: #2c3e50;
+  background-color: ${props => props.theme.menu.primary};
   height: ${defaults().boxOptionSize}px;
   width: ${defaults().boxOptionSize}px;
   left: ${props =>
@@ -52,8 +52,8 @@ const Option = styled.div<OptionProps>`
 
   &:hover {
     box-shadow: 2px 2px 5px black;
-    color: #2c3e50;
-    background-color: white;
+    color: ${props => props.theme.menu.alter};
+    background-color: ${props => props.theme.colors['background-hover']};
   }
 
   svg {
@@ -82,7 +82,7 @@ const LineBreak = styled.div`
   background: transparent;
   z-index: 0;
   border-radius: 50%;
-  border: 1px #2c3e50 solid;
+  border: 1px ${props => props.theme.menu.primary} solid;
 `
 
 function defaults() {
