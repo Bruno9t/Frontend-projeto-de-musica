@@ -1,7 +1,7 @@
 import 'styled-components'
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
+  export interface ThemeShape {
     name: string
 
     colors: {
@@ -13,12 +13,13 @@ declare module 'styled-components' {
       filter: string
     }
 
-    changeTheme(): void
-
     menu: {
       primary: string
       secondary: string
       alter: string
     }
+  }
+  export interface DefaultTheme extends ThemeShape {
+    changeTheme(): void
   }
 }

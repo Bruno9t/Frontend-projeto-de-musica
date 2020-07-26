@@ -1,4 +1,4 @@
-import React, { useContext, memo } from 'react'
+import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import {
   FiMusic,
@@ -19,11 +19,11 @@ import {
 } from './styles'
 
 const Menu = () => {
-  const theme = useContext(ThemeContext)
+  const { name, changeTheme } = useContext(ThemeContext)
   return (
     <Container>
-      <ToggleTheme keyP={0} onClick={theme.changeTheme}>
-        {theme.name === 'dark' ? (
+      <ToggleTheme keyP={0} onClick={changeTheme}>
+        {name === 'dark' ? (
           <FiSun
             aria-label="Alterar Tema"
             title="Alterar para tema light"

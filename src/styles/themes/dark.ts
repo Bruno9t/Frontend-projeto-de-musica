@@ -1,5 +1,3 @@
-import light from './light'
-
 export default {
   name: 'dark',
 
