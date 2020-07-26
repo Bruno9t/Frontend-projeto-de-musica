@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
-import { ThemeProvider } from 'styled-components'
+import React from "react"
+import { ThemeProvider } from "styled-components"
 
-import useLocalStorageState from './hooks/useLocalStorageState'
+import useLocalStorageState from "./hooks/useLocalStorageState"
 
-import Home from './pages/Home'
-import GlobalStyle from './styles/globals'
+import Home from "./pages/Home"
+import GlobalStyle from "./styles/globals"
 
-import themes from './styles/themes'
+import themes from "./styles/themes"
 
 const App = () => {
-  const [theme, setTheme] = useLocalStorageState('theme', 'dark')
+  const [theme, setTheme] = useLocalStorageState<string>("theme", "dark")
 
   const changeTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    setTheme(theme === "dark" ? "light" : "dark")
   }
 
   const themeConfig = {
