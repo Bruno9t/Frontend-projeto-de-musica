@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react"
+import { Link } from "react-router-dom"
 
-import Header from '../../components/Header'
-import { Container } from './styles'
+import Header from "../../components/Header"
+import { Container } from "./styles"
 
-import musicNote from '../../assets/musicNote.svg'
+import musicNote from "../../assets/musicNote.svg"
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
                 seguidores, podendo ficar famoso por aqui.
               </div>
               <div className="start-adventure-link">
-                <a href="/">Iniciar jornada musical</a>
+                <Link to="/auth/register">Iniciar jornada musical</Link>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components"
 
 import useLocalStorageState from "./hooks/useLocalStorageState"
 
-import Home from "./pages/Home"
+import Routes from "./routes"
 import GlobalStyle from "./styles/globals"
 
 import themes from "./styles/themes"
@@ -24,7 +24,7 @@ const App = () => {
     <>
       <ThemeProvider theme={themeConfig}>
         <GlobalStyle />
-        <Home />
+        <Routes />
       </ThemeProvider>
     </>
   )

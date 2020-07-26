@@ -1,10 +1,11 @@
-import React from 'react'
-// import { Link } from 'react-router-dom'
-import logo from '../../assets/music.svg'
-import note from '../../assets/note.svg'
+import React from "react"
+import { Link } from "react-router-dom"
 
-import { Title, Container, LogoInfo, LoginInfo } from './styles'
-import Menu from '../Menu'
+import logo from "../../assets/music.svg"
+import note from "../../assets/note.svg"
+
+import { Title, Container, LogoInfo, LoginInfo } from "./styles"
+import Menu from "../Menu"
 
 const Header = () => {
   return (
@@ -20,10 +21,10 @@ const Header = () => {
 
       <LoginInfo>
         <div id="login">
-          <a href="/">Entrar</a>
+          <Link to="/auth/login">Login</Link>
         </div>
         <div id="register">
-          <a href="/">Registrar</a>
+          <Link to="/auth/register">Registrar</Link>
         </div>
       </LoginInfo>
     </Container>
