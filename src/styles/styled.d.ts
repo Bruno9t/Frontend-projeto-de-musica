@@ -1,6 +1,6 @@
-import 'styled-components'
+import "styled-components"
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface ThemeShape {
     name: string
 
@@ -9,7 +9,7 @@ declare module 'styled-components' {
       secondary: string
 
       text: string
-      'background-hover': string
+      "background-hover": string
       filter: string
     }
 

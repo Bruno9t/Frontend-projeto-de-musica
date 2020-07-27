@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
 
@@ -9,10 +9,10 @@ export default createGlobalStyle`
     box-sizing:border-box;
   }
   body{
-    background-color:${props => props.theme.colors.primary};
+    background:${props => props.theme.colors.primary};
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
       'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      transition:400ms;
+      /* transition: 400ms; */
   }
 
   button {
@@ -20,3 +20,4 @@ export default createGlobalStyle`
   }
 
 `
+/* `linear-gradient(${props.theme.colors.primary},blue)`}; */

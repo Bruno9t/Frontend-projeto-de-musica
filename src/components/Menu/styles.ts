@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 interface OptionProps {
   keyP: number
@@ -53,7 +53,7 @@ const Option = styled.div<OptionProps>`
   &:hover {
     box-shadow: 2px 2px 5px black;
     color: ${props => props.theme.menu.alter};
-    background-color: ${props => props.theme.colors['background-hover']};
+    background-color: ${props => props.theme.colors["background-hover"]};
   }
 
   svg {

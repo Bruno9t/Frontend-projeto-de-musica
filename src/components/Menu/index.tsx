@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from 'styled-components'
+import React, { useContext } from "react"
+import { ThemeContext } from "styled-components"
 import {
   FiMusic,
   FiPlusCircle,
@@ -9,21 +9,21 @@ import {
   FiAlignJustify,
   FiMoon,
   FiSun,
-} from 'react-icons/fi'
+} from "react-icons/fi"
 import {
   Container,
   MenuOptions,
   Option,
   ToggleTheme,
   LineBreak,
-} from './styles'
+} from "./styles"
 
 const Menu = () => {
   const { name, changeTheme } = useContext(ThemeContext)
   return (
     <Container>
       <ToggleTheme keyP={0} onClick={changeTheme}>
-        {name === 'dark' ? (
+        {name === "dark" ? (
           <FiSun
             aria-label="Alterar Tema"
             title="Alterar para tema light"

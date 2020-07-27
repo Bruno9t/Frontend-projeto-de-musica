@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const Title = styled.h1`
   position: absolute;
@@ -70,14 +70,14 @@ const LoginInfo = styled.div`
     text-decoration: none;
     color: ${props => props.theme.colors.text};
     font-weight: bold;
-    border: 2px solid ${props => props.theme.colors['background-hover']};
+    border: 2px solid ${props => props.theme.colors["background-hover"]};
     background-color: ${props => props.theme.colors.primary};
     border-radius: 3px;
     transition: 300ms;
   }
 
   div a:hover {
-    background: ${props => props.theme.colors['background-hover']};
+    background: ${props => props.theme.colors["background-hover"]};
     color: ${props => props.theme.colors.primary};
     border: 2px solid ${props => props.theme.colors.secondary};
   }
