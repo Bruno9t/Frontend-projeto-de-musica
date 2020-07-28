@@ -1,25 +1,54 @@
 import styled from "styled-components"
 
 const Container = styled.div`
-  position: relative;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
   height: 100vh;
 
-  & > div {
+  div#image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div#image img {
     position: absolute;
-    background: blue;
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 2px 2px 5px black;
+    background: ${props => props.theme.colors.secondary};
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+  div#form {
+    position: relative;
+  }
+
+  div#form > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+  }
+
+  div#form > div h1 {
+    color: ${props => props.theme.colors.text};
+    border-bottom: 2px solid ${props => props.theme.colors.secondary};
+    padding: 20px;
   }
 
   & > div > form {
     background: ${props => props.theme.colors.secondary};
-    height: 100%;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  div#group-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `
+
 export { Container }

@@ -8,6 +8,7 @@ export default {
     text: "white",
     "background-hover": "white",
     filter: "",
+    inputIcon: "white",
   },
 
   menu: {

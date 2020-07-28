@@ -9,6 +9,7 @@ export default {
     "background-hover": "#2c3e50",
     filter:
       "invert(19%) sepia(58%) saturate(357%) hue-rotate(168deg) brightness(25%) contrast(89%)",
+    inputIcon: "#2c3e50",
   },
 
   menu: {

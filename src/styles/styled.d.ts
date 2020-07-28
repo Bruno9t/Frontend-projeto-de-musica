@@ -11,6 +11,7 @@ declare module "styled-components" {
       text: string
       "background-hover": string
       filter: string
+      inputIcon: string
     }
 
     menu: {
